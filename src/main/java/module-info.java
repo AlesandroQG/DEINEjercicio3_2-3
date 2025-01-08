@@ -1,6 +1,8 @@
 module com.alesandro.ejercicio3_23 {
     requires javafx.controls;
     requires javafx.fxml;
+    requires net.sf.jasperreports.core;
+    requires java.sql;
 
 
     opens com.alesandro.ejercicio3_23 to javafx.fxml;

@@ -20,9 +20,9 @@ public class SupermercadoApplication extends Application {
      */
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(SupermercadoApplication.class.getResource("fxml/Agenda.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(SupermercadoApplication.class.getResource("fxml/Supermercado.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
-        stage.setTitle("INFORMES");
+        stage.setTitle("Supermercado");
         stage.setScene(scene);
         stage.show();
     }
