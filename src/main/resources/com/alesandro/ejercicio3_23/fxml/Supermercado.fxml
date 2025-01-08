@@ -4,7 +4,6 @@
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.layout.VBox?>
 
 <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
@@ -18,9 +17,6 @@
                         <Button mnemonicParsing="false" onAction="#informeProductos" text="Abrir Informe" />
                      </children></AnchorPane>
               </content>
-               <graphic>
-                  <FlowPane prefHeight="200.0" prefWidth="200.0" />
-               </graphic>
             </Tab>
             <Tab text="Secciones">
               <content>

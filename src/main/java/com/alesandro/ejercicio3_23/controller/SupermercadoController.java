@@ -1,5 +1,6 @@
 package com.alesandro.ejercicio3_23.controller;
 
+import com.alesandro.ejercicio3_23.SupermercadoApplication;
 import com.alesandro.ejercicio3_23.dao.DaoProducto;
 import com.alesandro.ejercicio3_23.db.DBConnect;
 import javafx.application.Platform;
@@ -34,13 +35,18 @@ public class SupermercadoController implements Initializable {
         //
     }
 
+    /**
+     * Función que es ejecuta cuando se pulsa el botón “Abrir Informe” de la pestaña Productos. Abre el informe de productos
+     *
+     * @param event evento del usuario
+     */
     @FXML
     void informeProductos(ActionEvent event) {
         DBConnect connection;
         try {
             connection = new DBConnect(); // Instanciar la conexión con la base de datos
             HashMap<String, Object> parameters = DaoProducto.findAll(); // Cargar todos los países de la base de datos para insertar en el informe
-            JasperReport report = (JasperReport) JRLoader.loadObject(AgendaApplication.class.getResource("reports/" + informe + ".jasper")); // Obtener el fichero del informe
+            JasperReport report = (JasperReport) JRLoader.loadObject(SupermercadoApplication.class.getResource("reports/InformeProductos.jasper")); // Obtener el fichero del informe
             JasperPrint jprint = JasperFillManager.fillReport(report, parameters, connection.getConnection()); // Cargar el informe con los países
             JasperViewer viewer = new JasperViewer(jprint, false); // Instanciar la vista del informe para mostrar el informe
             viewer.setVisible(true); // Mostrar el informe al usuario
@@ -55,16 +61,31 @@ public class SupermercadoController implements Initializable {
         }
     }
 
+    /**
+     * Función que es ejecuta cuando se pulsa el botón “Abrir Informe” de la pestaña Secciones. Abre el informe de secciones
+     *
+     * @param event evento del usuario
+     */
     @FXML
     void informeSecciones(ActionEvent event) {
         //
     }
 
+    /**
+     * Función que es ejecuta cuando se pulsa el botón “Abrir Informe” de la pestaña Tabla productos. Abre el informe de tabla productos
+     *
+     * @param event evento del usuario
+     */
     @FXML
     void informeTablaProductos(ActionEvent event) {
         //
     }
 
+    /**
+     * Función que es ejecuta cuando se abre la pestaña Gráficos. Abre el informe de gráficos
+     *
+     * @param event evento del usuario
+     */
     @FXML
     void informeGraficos(ActionEvent event) {
         //

@@ -27,11 +27,13 @@ La estructura del proyecto es la siguiente:
           - `Supermercado.fxml`: Ventana principal de la aplicación
         - `images`: Carpeta que contiene las imágenes de la aplicación
         - `reports`:
-          - `InformePersonas1.jasper`: Fichero del informe de JasperReport del apartado 1 (Informe personas)
-          - `InformePersonas1.jrxml`: Fichero para la edición del informe de JasperReport en JasperStudio del apartado 1 (Informe personas)
-          - `InformePersonas2.jasper`: Fichero del informe de JasperReport del apartado 2 (Informe personas con cálculos)
-          - `InformePersonas2.jrxml`: Fichero para la edición del informe de JasperReport en JasperStudio del apartado 2 (Informe personas con cálculos)
-          - `InformePersonas3.jasper`: Fichero del informe de JasperReport del apartado 3 (Informe personas con subinformes)
-          - `InformePersonas3.jrxml`: Fichero para la edición del informe de JasperReport en JasperStudio del apartado 3 (Informe personas con subinformes)
+          - `InformeProductos.jasper`: Fichero del informe de JasperReport de productos
+          - `InformeProductos.jrxml`: Fichero para la edición del informe de JasperReport en JasperStudio de productos
+          - `InformeSecciones.jasper`: Fichero del informe de JasperReport de las secciones
+          - `InformeSecciones.jrxml`: Fichero para la edición del informe de JasperReport en JasperStudio de las secciones
+          - `InformeTablaProductos.jasper`: Fichero del informe de JasperReport de tabla productos
+          - `InformeTablaProductos.jrxml`: Fichero para la edición del informe de JasperReport en JasperStudio de tabla productos
+          - `InformeGraficos.jasper`: Fichero del informe de JasperReport de gráficos
+          - `InformeGraficos.jrxml`: Fichero para la edición del informe de JasperReport en JasperStudio de gráficos
         - `sql`:
           - `supermercado.sql`: Fichero para la creación de la base de datos
