@@ -1,4 +1,4 @@
-# Ejercicio 3_2 4 - Supermercado
+# Ejercicio 3_2 3 - Supermercado
 ## DM2 DEIN 2024-2025
 ### Alesandro Quirós Gobbato
 

@@ -1,9 +1,7 @@
 package com.alesandro.ejercicio3_23.controller;
 
 import com.alesandro.ejercicio3_23.SupermercadoApplication;
-import com.alesandro.ejercicio3_23.dao.DaoProducto;
 import com.alesandro.ejercicio3_23.db.DBConnect;
-import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -45,19 +43,13 @@ public class SupermercadoController implements Initializable {
         DBConnect connection;
         try {
             connection = new DBConnect(); // Instanciar la conexión con la base de datos
-            HashMap<String, Object> parameters = DaoProducto.findAll(); // Cargar todos los países de la base de datos para insertar en el informe
             JasperReport report = (JasperReport) JRLoader.loadObject(SupermercadoApplication.class.getResource("reports/InformeProductos.jasper")); // Obtener el fichero del informe
-            JasperPrint jprint = JasperFillManager.fillReport(report, parameters, connection.getConnection()); // Cargar el informe con los países
+            JasperPrint jprint = JasperFillManager.fillReport(report, null, connection.getConnection()); // Cargar el informe con los productos
             JasperViewer viewer = new JasperViewer(jprint, false); // Instanciar la vista del informe para mostrar el informe
             viewer.setVisible(true); // Mostrar el informe al usuario
-        } catch (JRException e) {
+        } catch (JRException | SQLException e) {
             System.err.println(e.getMessage());
             mostrarAlerta("Ha ocurrido un error cargando el informe");
-            Platform.exit(); // Cerrar la aplicación
-        } catch (SQLException e) {
-            System.err.println(e.getMessage());
-            mostrarAlerta("Ha ocurrido un erros cargando los países de la base de datos");
-            Platform.exit(); // Cerrar la aplicación
         }
     }
 
@@ -68,7 +60,17 @@ public class SupermercadoController implements Initializable {
      */
     @FXML
     void informeSecciones(ActionEvent event) {
-        //
+        DBConnect connection;
+        try {
+            connection = new DBConnect(); // Instanciar la conexión con la base de datos
+            JasperReport report = (JasperReport) JRLoader.loadObject(SupermercadoApplication.class.getResource("reports/InformeProductos.jasper")); // Obtener el fichero del informe
+            JasperPrint jprint = JasperFillManager.fillReport(report, null, connection.getConnection()); // Cargar el informe con los secciones
+            JasperViewer viewer = new JasperViewer(jprint, false); // Instanciar la vista del informe para mostrar el informe
+            viewer.setVisible(true); // Mostrar el informe al usuario
+        } catch (JRException | SQLException e) {
+            System.err.println(e.getMessage());
+            mostrarAlerta("Ha ocurrido un error cargando el informe");
+        }
     }
 
     /**
@@ -78,7 +80,17 @@ public class SupermercadoController implements Initializable {
      */
     @FXML
     void informeTablaProductos(ActionEvent event) {
-        //
+        DBConnect connection;
+        try {
+            connection = new DBConnect(); // Instanciar la conexión con la base de datos
+            JasperReport report = (JasperReport) JRLoader.loadObject(SupermercadoApplication.class.getResource("reports/InformeProductos.jasper")); // Obtener el fichero del informe
+            JasperPrint jprint = JasperFillManager.fillReport(report, null, connection.getConnection()); // Cargar el informe con los productos
+            JasperViewer viewer = new JasperViewer(jprint, false); // Instanciar la vista del informe para mostrar el informe
+            viewer.setVisible(true); // Mostrar el informe al usuario
+        } catch (JRException | SQLException e) {
+            System.err.println(e.getMessage());
+            mostrarAlerta("Ha ocurrido un error cargando el informe");
+        }
     }
 
     /**
@@ -88,7 +100,17 @@ public class SupermercadoController implements Initializable {
      */
     @FXML
     void informeGraficos(ActionEvent event) {
-        //
+        DBConnect connection;
+        try {
+            connection = new DBConnect(); // Instanciar la conexión con la base de datos
+            JasperReport report = (JasperReport) JRLoader.loadObject(SupermercadoApplication.class.getResource("reports/InformeProductos.jasper")); // Obtener el fichero del informe
+            JasperPrint jprint = JasperFillManager.fillReport(report, null, connection.getConnection()); // Cargar el informe con los gráficos
+            JasperViewer viewer = new JasperViewer(jprint, false); // Instanciar la vista del informe para mostrar el informe
+            viewer.setVisible(true); // Mostrar el informe al usuario
+        } catch (JRException | SQLException e) {
+            System.err.println(e.getMessage());
+            mostrarAlerta("Ha ocurrido un error cargando el informe");
+        }
     }
 
     /**
