@@ -4,7 +4,6 @@ import com.alesandro.ejercicio3_23.SupermercadoApplication;
 import com.alesandro.ejercicio3_23.db.DBConnect;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
 import net.sf.jasperreports.engine.JRException;
 import net.sf.jasperreports.engine.JasperCompileManager;
@@ -49,11 +48,11 @@ public class SupermercadoController {
     @FXML
     void informeSecciones(ActionEvent event) {
         DBConnect connection;
-        HashMap<String, Object> parameters = new HashMap<String, Object>();
         try {
             connection = new DBConnect(); // Instanciar la conexión con la base de datos
-            parameters.put("productosinforme", compilar("SubinformeProductos.jrxml"));
-            JasperReport report = (JasperReport) JRLoader.loadObject(SupermercadoApplication.class.getResource("reports/InformeProductos.jasper")); // Obtener el fichero del informe
+            HashMap<String, Object> parameters = new HashMap<String, Object>();
+            parameters.put("productosreport", compilar("SubinformeProductos.jrxml"));
+            JasperReport report = (JasperReport) JRLoader.loadObject(SupermercadoApplication.class.getResource("reports/InformeSecciones.jasper")); // Obtener el fichero del informe
             JasperPrint jprint = JasperFillManager.fillReport(report, parameters, connection.getConnection()); // Cargar el informe con los secciones
             JasperViewer viewer = new JasperViewer(jprint, false); // Instanciar la vista del informe para mostrar el informe
             viewer.setVisible(true); // Mostrar el informe al usuario

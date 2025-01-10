@@ -1,0 +1,77 @@
+<!-- Created with Jaspersoft Studio version 7.0.1.final using JasperReports Library version 7.0.1-573496633c2b4074e32f433154b543003f7d2498  -->
+<jasperReport name="SubinformeProductos" language="java" columnCount="1" pageWidth="570" pageHeight="400" columnWidth="560" leftMargin="5" rightMargin="5" topMargin="5" bottomMargin="5" uuid="4b9396e5-0a7d-465b-9750-264a3605714d">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="MariaDB Contra Docker en Local"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value="c3VwZXJtZXJjYWRvLnByb2R1Y3RvICwxNSwxNSw1MDkxYTMyYi01YzZiLTRlNTItYTViNS0wNGIx&#xa;ZDJiYjI2MjQ7"/>
+	<property name="com.jaspersoft.studio.data.sql.SQLQueryDesigner.sash.w1" value="469"/>
+	<property name="com.jaspersoft.studio.data.sql.SQLQueryDesigner.sash.w2" value="520"/>
+	<parameter name="codigo" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[1]]></defaultValueExpression>
+	</parameter>
+	<query language="sql"><![CDATA[SELECT codigo,
+	nombre,
+	precio,
+	stock,
+	seccion
+FROM supermercado.producto
+WHERE 
+	 supermercado.producto.seccion = $P{codigo}]]></query>
+	<field name="codigo" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="codigo"/>
+		<property name="com.jaspersoft.studio.field.label" value="codigo"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="producto"/>
+	</field>
+	<field name="nombre" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="nombre"/>
+		<property name="com.jaspersoft.studio.field.label" value="nombre"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="producto"/>
+	</field>
+	<field name="precio" class="java.lang.Float">
+		<property name="com.jaspersoft.studio.field.name" value="precio"/>
+		<property name="com.jaspersoft.studio.field.label" value="precio"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="producto"/>
+	</field>
+	<field name="stock" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="stock"/>
+		<property name="com.jaspersoft.studio.field.label" value="stock"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="producto"/>
+	</field>
+	<field name="seccion" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="seccion"/>
+		<property name="com.jaspersoft.studio.field.label" value="seccion"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="producto"/>
+	</field>
+	<background splitType="Stretch"/>
+	<columnHeader height="19" splitType="Stretch">
+		<element kind="staticText" uuid="b9b51d44-3f0b-45f2-b99c-c0272edc12eb" mode="Opaque" x="0" y="0" width="150" height="19" forecolor="#FFFFFF" backcolor="#FF0905" fontSize="11.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[Producto]]></text>
+		</element>
+		<element kind="staticText" uuid="b2dcfa08-4a91-4231-9ea0-dfa63c7ecff3" mode="Opaque" x="150" y="0" width="150" height="19" forecolor="#FFFFFF" backcolor="#FF0905" fontSize="11.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[Unidad]]></text>
+		</element>
+		<element kind="staticText" uuid="7aff5579-a170-4441-aa90-3e489ca937df" mode="Opaque" x="300" y="0" width="140" height="19" forecolor="#FFFFFF" backcolor="#FF0905" fontSize="11.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[Precio]]></text>
+		</element>
+		<element kind="staticText" uuid="57ead41e-d5a6-4ab3-af9a-d25f5ece2e1a" mode="Opaque" x="440" y="0" width="119" height="19" forecolor="#FFFFFF" backcolor="#FF0905" fontSize="11.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[Precio con IVA]]></text>
+		</element>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<element kind="textField" uuid="8094d6b2-ebc8-4271-b053-a30f2ff8ee41" x="0" y="0" width="150" height="20" hTextAlign="Center" vTextAlign="Middle">
+				<expression><![CDATA[$F{nombre}]]></expression>
+			</element>
+			<element kind="textField" uuid="362e12a8-d7cf-4096-96f4-ada07d194e02" x="150" y="0" width="150" height="20" hTextAlign="Right" vTextAlign="Middle">
+				<expression><![CDATA[$F{stock}]]></expression>
+				<box rightPadding="5"/>
+			</element>
+			<element kind="textField" uuid="3ead79f6-2a4f-4286-8d2f-cdb7156ddbc1" x="300" y="0" width="140" height="20" hTextAlign="Right" vTextAlign="Middle">
+				<expression><![CDATA[$F{precio}]]></expression>
+				<box rightPadding="5"/>
+			</element>
+			<element kind="textField" uuid="d0a1c339-784a-47fc-84a7-8bb87e6392ad" x="440" y="0" width="119" height="20" hTextAlign="Right" vTextAlign="Middle">
+				<expression><![CDATA[$F{precio} * 1.21f]]></expression>
+				<box rightPadding="5"/>
+			</element>
+		</band>
+	</detail>
+</jasperReport>
