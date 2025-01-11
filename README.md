@@ -31,7 +31,6 @@ La estructura del proyecto es la siguiente:
           - `InformeProductos.jrxml`: Fichero para la edición del informe de JasperReport en JasperStudio de productos
           - `InformeSecciones.jasper`: Fichero del informe de JasperReport de las secciones
           - `InformeSecciones.jrxml`: Fichero para la edición del informe de JasperReport en JasperStudio de las secciones
-          - `SubinformeProductos.jrxml`: Fichero de JasperReport para la edición del subinforme en JasperStudio a usar en el informe de las secciones
           - `InformeTablaProductos.jasper`: Fichero del informe de JasperReport de tabla productos
           - `InformeTablaProductos.jrxml`: Fichero para la edición del informe de JasperReport en JasperStudio de tabla productos
           - `InformeGraficos.jasper`: Fichero del informe de JasperReport de gráficos
