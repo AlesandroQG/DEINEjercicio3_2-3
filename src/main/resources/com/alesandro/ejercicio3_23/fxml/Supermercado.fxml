@@ -49,11 +49,15 @@
                   </AnchorPane>
                </content>
             </Tab>
-            <Tab onSelectionChanged="#informeGraficos" text="Gráficos">
+            <Tab text="Gráficos">
                <content>
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
-                        <FlowPane alignment="CENTER" prefHeight="175.0" prefWidth="600.0" />
+                        <FlowPane alignment="CENTER" prefHeight="175.0" prefWidth="600.0">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#informeGraficos" text="Abrir Informe" />
+                           </children>
+                        </FlowPane>
                      </children></AnchorPane>
                </content>
             </Tab>

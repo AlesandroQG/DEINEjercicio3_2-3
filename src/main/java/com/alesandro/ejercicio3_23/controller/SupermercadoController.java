@@ -68,7 +68,7 @@ public class SupermercadoController {
     }
 
     /**
-     * Función que es ejecuta cuando se abre la pestaña Gráficos. Abre el informe de gráficos
+     * Función que es ejecuta cuando se pulsa el botón “Abrir Informe” de la pestaña Gráficos. Abre el informe de gráficos
      *
      * @param event evento del usuario
      */
